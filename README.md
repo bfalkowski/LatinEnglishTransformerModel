@@ -17,11 +17,9 @@ Code Derived from https://github.com/hkproj/pytorch-transformer
 - Sample: https://opus.nlpl.eu/CCMatrix/v1/en-la_sample.html
 - Paper: https://arxiv.org/abs/1911.04944
 
-The latin dataset is as follows:
-- <img width="356" alt="image" src="https://github.com/bfalkowski/latinTransformerV1/assets/89485571/5f2934f0-59bc-4d3c-978f-ca88ad99fd19">
-
-- 1,114,190 Sentance pairs
-- 14.5 M words
+The latin dataset contans:
+    - 1,114,190 Sentance pairs
+    - 14.5 M words
 
 ## Huggingface
 - README: https://huggingface.co/datasets/yhavinga/ccmatrix/blob/main/README.md
@@ -36,6 +34,12 @@ The latin dataset is as follows:
         "translation": {
             "en": "No telling what sort of magic he might have.\""
             "la": "numque magistrâtum cum iis habent.\
+        },
+        "id": 2,
+        "score": 1.1443379,
+        "translation": {
+            "en": "Not many, but much.\""
+            "la": "non multa sed multum.\
         }
     }
 ```

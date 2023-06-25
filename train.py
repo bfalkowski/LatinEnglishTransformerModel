@@ -72,6 +72,7 @@ def run_validation(model, validation_ds, tokenizer_src, tokenizer_tgt, max_len, 
         console_width = 80
 
     with torch.no_grad():
+    #with torch.inference_mode():
         for batch in validation_ds:
             count += 1
             encoder_input = batch["encoder_input"].to(device) # (b, seq_len)
@@ -139,8 +140,9 @@ def get_or_build_tokenizer(config, ds, lang):
     return tokenizer
 
 def get_ds(config):
+    # https://huggingface.co/datasets/yhavinga/ccmatrix/viewer/en-la/train
     # It only has the train split, so we divide it overselves
-    ds_raw = load_dataset('opus_books', f"{config['lang_src']}-{config['lang_tgt']}", split='train')
+    ds_raw = load_dataset('yhavinga/ccmatrix', f"{config['lang_src']}-{config['lang_tgt']}", split='train')
 
     # Build tokenizers
     tokenizer_src = get_or_build_tokenizer(config, ds_raw, config['lang_src'])

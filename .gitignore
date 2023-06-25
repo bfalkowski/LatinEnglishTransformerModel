@@ -1,7 +1,22 @@
-# Ignore anything in a directory named "runs" and all its contents
-runs/
+# Ignore Python bytecode cache files
+__pycache__/
+
+# Ignore any file with the .pt extension
+*.pt
 
 # Ignore any file with the .json extension
 *.json
 
+# Ignore the 'runs' directory and its contents
+runs/
+
+# Ignore the 'weights' directory and its contents
+weights/
+
+# Ignore Jupyter Notebook checkpoints directory
 .ipynb_checkpoints/
+
+
+#Ignore developer and TODO notes
+developer.md
+todo.md
