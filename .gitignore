@@ -1,0 +1,7 @@
+# Ignore anything in a directory named "runs" and all its contents
+runs/
+
+# Ignore any file with the .json extension
+*.json
+
+.ipynb_checkpoints/
